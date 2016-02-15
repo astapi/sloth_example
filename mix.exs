@@ -13,7 +13,7 @@ defmodule SlackTodo.Mixfile do
   def application do
     [
       mod: {SlackTodo, []},
-      applications: [:logger, :slacker, :sloth, :exredis, :timex]
+      applications: [:logger, :websocket_client, :slacker, :sloth, :exredis, :timex]
     ]
   end
 
@@ -23,7 +23,8 @@ defmodule SlackTodo.Mixfile do
       {:slacker,  "~> 0.0.1"},
       {:sloth, github: "tamai/sloth"},
       {:exredis, ">= 0.2.2"},
-      {:timex, "~> 1.0.1"}
+      {:timex, "~> 1.0.1"},
+      {:exrm, "~> 1.0.0-rc7"},
     ]
   end
 end
